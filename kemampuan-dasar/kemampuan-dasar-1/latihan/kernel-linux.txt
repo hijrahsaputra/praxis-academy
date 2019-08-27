@@ -1,0 +1,110 @@
+hj@hj:~$ dpkg --get-selections | grep linux-image
+linux-image-4.13.0-16-generic			deinstall
+linux-image-4.13.0-17-generic			install
+linux-image-4.13.0-19-generic			deinstall
+linux-image-4.13.0-21-generic			deinstall
+linux-image-4.13.0-25-generic			deinstall
+linux-image-4.13.0-31-generic			install
+linux-image-4.13.0-32-generic			deinstall
+linux-image-4.13.0-36-generic			install
+linux-image-4.13.0-37-generic			deinstall
+linux-image-4.13.0-39-generic			deinstall
+linux-image-4.13.0-41-generic			deinstall
+linux-image-4.13.0-43-generic			deinstall
+linux-image-4.13.0-45-generic			install
+linux-image-4.13.0-46-generic			install
+linux-image-extra-4.13.0-16-generic		deinstall
+linux-image-extra-4.13.0-17-generic		install
+linux-image-extra-4.13.0-19-generic		deinstall
+linux-image-extra-4.13.0-21-generic		deinstall
+linux-image-extra-4.13.0-25-generic		deinstall
+linux-image-extra-4.13.0-31-generic		install
+linux-image-extra-4.13.0-32-generic		deinstall
+linux-image-extra-4.13.0-36-generic		install
+linux-image-extra-4.13.0-37-generic		deinstall
+linux-image-extra-4.13.0-39-generic		deinstall
+linux-image-extra-4.13.0-41-generic		deinstall
+linux-image-extra-4.13.0-43-generic		deinstall
+linux-image-extra-4.13.0-45-generic		install
+linux-image-extra-4.13.0-46-generic		install
+linux-image-generic				install
+hj@hj:~$ dpkg -l | grep linux-image
+rc  linux-image-4.13.0-16-generic                 4.13.0-16.19                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-4.13.0-17-generic                 4.13.0-17.20                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-4.13.0-19-generic                 4.13.0-19.22                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-4.13.0-21-generic                 4.13.0-21.24                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-4.13.0-25-generic                 4.13.0-25.29                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-4.13.0-31-generic                 4.13.0-31.34                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-4.13.0-32-generic                 4.13.0-32.35                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-4.13.0-36-generic                 4.13.0-36.40                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-4.13.0-37-generic                 4.13.0-37.42                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-4.13.0-39-generic                 4.13.0-39.44                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-4.13.0-41-generic                 4.13.0-41.46                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-4.13.0-43-generic                 4.13.0-43.48                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-4.13.0-45-generic                 4.13.0-45.50                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-4.13.0-46-generic                 4.13.0-46.51                                             amd64        Linux kernel image for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-16-generic           4.13.0-16.19                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-extra-4.13.0-17-generic           4.13.0-17.20                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-19-generic           4.13.0-19.22                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-21-generic           4.13.0-21.24                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-25-generic           4.13.0-25.29                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-extra-4.13.0-31-generic           4.13.0-31.34                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-32-generic           4.13.0-32.35                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-extra-4.13.0-36-generic           4.13.0-36.40                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-37-generic           4.13.0-37.42                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-39-generic           4.13.0-39.44                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-41-generic           4.13.0-41.46                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+rc  linux-image-extra-4.13.0-43-generic           4.13.0-43.48                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-extra-4.13.0-45-generic           4.13.0-45.50                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-extra-4.13.0-46-generic           4.13.0-46.51                                             amd64        Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
+ii  linux-image-generic                           4.13.0.46.49                                             amd64        Generic Linux kernel image
+hj@hj:~$ ls /boot/
+abi-4.13.0-17-generic  config-4.13.0-17-generic  grub                          initrd.img-4.13.0-46-generic  retpoline-4.13.0-45-generic   System.map-4.13.0-45-generic  vmlinuz-4.13.0-45-generic
+abi-4.13.0-31-generic  config-4.13.0-31-generic  initrd.img-4.13.0-17-generic  memtest86+.bin                retpoline-4.13.0-46-generic   System.map-4.13.0-46-generic  vmlinuz-4.13.0-46-generic
+abi-4.13.0-36-generic  config-4.13.0-36-generic  initrd.img-4.13.0-31-generic  memtest86+.elf                System.map-4.13.0-17-generic  vmlinuz-4.13.0-17-generic
+abi-4.13.0-45-generic  config-4.13.0-45-generic  initrd.img-4.13.0-36-generic  memtest86+_multiboot.bin      System.map-4.13.0-31-generic  vmlinuz-4.13.0-31-generic
+abi-4.13.0-46-generic  config-4.13.0-46-generic  initrd.img-4.13.0-45-generic  retpoline-4.13.0-36-generic   System.map-4.13.0-36-generic  vmlinuz-4.13.0-36-generic
+hj@hj:~$ ls -lia /boot/
+total 315000
+4194305 drwxr-xr-x  3 root root     4096 Sep  3  2018 .
+      2 drwxr-xr-x 25 root root     4096 Jul  5  2018 ..
+4203390 -rw-r--r--  1 root root  1500314 Nov  1  2017 abi-4.13.0-17-generic
+4204347 -rw-r--r--  1 root root  1500342 Jan 19  2018 abi-4.13.0-31-generic
+4204572 -rw-r--r--  1 root root  1501359 Feb 17  2018 abi-4.13.0-36-generic
+4205046 -rw-r--r--  1 root root  1501528 Mei 28  2018 abi-4.13.0-45-generic
+4205933 -rw-r--r--  1 root root  1501528 Jun 12  2018 abi-4.13.0-46-generic
+4203391 -rw-r--r--  1 root root   213028 Nov  1  2017 config-4.13.0-17-generic
+4204349 -rw-r--r--  1 root root   213156 Jan 19  2018 config-4.13.0-31-generic
+4205036 -rw-r--r--  1 root root   213212 Feb 17  2018 config-4.13.0-36-generic
+4205047 -rw-r--r--  1 root root   213212 Mei 28  2018 config-4.13.0-45-generic
+4206063 -rw-r--r--  1 root root   213212 Jun 12  2018 config-4.13.0-46-generic
+4194306 drwxr-xr-x  5 root root     4096 Agu 27 15:29 grub
+4195385 -rw-r--r--  1 root root 50830196 Mei  4  2018 initrd.img-4.13.0-17-generic
+4195384 -rw-r--r--  1 root root 50831169 Mei  4  2018 initrd.img-4.13.0-31-generic
+4194307 -rw-r--r--  1 root root 50996038 Mei  4  2018 initrd.img-4.13.0-36-generic
+4202235 -rw-r--r--  1 root root 51000829 Jun 29  2018 initrd.img-4.13.0-45-generic
+4194642 -rw-r--r--  1 root root 51001209 Agu 31  2018 initrd.img-4.13.0-46-generic
+4194310 -rw-r--r--  1 root root   182704 Jan 28  2016 memtest86+.bin
+4194311 -rw-r--r--  1 root root   184380 Jan 28  2016 memtest86+.elf
+4194312 -rw-r--r--  1 root root   184840 Jan 28  2016 memtest86+_multiboot.bin
+4205037 -rw-r--r--  1 root root     2860 Feb 17  2018 retpoline-4.13.0-36-generic
+4205048 -rw-r--r--  1 root root      255 Mei 28  2018 retpoline-4.13.0-45-generic
+4206446 -rw-r--r--  1 root root      255 Jun 12  2018 retpoline-4.13.0-46-generic
+4203388 -rw-------  1 root root  3881480 Nov  1  2017 System.map-4.13.0-17-generic
+4204170 -rw-------  1 root root  3877797 Jan 19  2018 System.map-4.13.0-31-generic
+4204563 -rw-------  1 root root  3880918 Feb 17  2018 System.map-4.13.0-36-generic
+4204848 -rw-------  1 root root  3884611 Mei 28  2018 System.map-4.13.0-45-generic
+4205338 -rw-------  1 root root  3884611 Jun 12  2018 System.map-4.13.0-46-generic
+4203392 -rw-------  1 root root  7816976 Nov  1  2017 vmlinuz-4.13.0-17-generic
+4204362 -rw-------  1 root root  7833360 Jan 19  2018 vmlinuz-4.13.0-31-generic
+4205191 -rw-------  1 root root  7870224 Feb 17  2018 vmlinuz-4.13.0-36-generic
+4205219 -rw-------  1 root root  7870224 Mei 28  2018 vmlinuz-4.13.0-45-generic
+4206447 -rw-------  1 root root  7870224 Jun 12  2018 vmlinuz-4.13.0-46-generic
+
+
+Keterangan : 
+vmlinuz-4.13.0-46-generic  adalah versi kernel linux yang digunakan
+System.map digunakan untuk tabel simbol yang digunakan dalam pengalamatan memori
+retpoline kernel digunakan untuk Spectre V2
+initrd digunakan sebagai boot loade dalam menginisiasi RAM disk
+abi (application binary interface) 

@@ -1,0 +1,264 @@
+hj@hj:~$ cd /media/hj/MASTER/praxis-academy/
+hj@hj:/media/hj/MASTER/praxis-academy$ ls -lia
+total 17
+131096 drwxrwxrwx 1 hj hj 4096 Agu 27 15:31 .
+     5 drwxrwxrwx 1 hj hj 8192 Agu 27 15:19 ..
+131097 drwxrwxrwx 1 hj hj 4096 Agu 27 15:19 .git
+131136 drwxrwxrwx 1 hj hj    0 Agu 27 15:22 kemampuan-dasar
+131147 -rwxrwxrwx 1 hj hj  156 Agu 27 15:31 link
+131109 -rwxrwxrwx 1 hj hj   42 Agu 27 15:19 README.md
+hj@hj:/media/hj/MASTER/praxis-academy$ cat > testfile
+ini adalah contoh penggunaan cat untuk membuat file
+hj@hj:/media/hj/MASTER/praxis-academy$ cat testfile 
+ini adalah contoh penggunaan cat untuk membuat file
+hj@hj:/media/hj/MASTER/praxis-academy$ cat testfile2
+cat: testfile2: No such file or directory
+hj@hj:/media/hj/MASTER/praxis-academy$ cat > testfile2
+Test fungsi cat dengan 2 file
+hj@hj:/media/hj/MASTER/praxis-academy$ cat testfile testfile2 > testfile3
+hj@hj:/media/hj/MASTER/praxis-academy$ cat testfile3
+ini adalah contoh penggunaan cat untuk membuat file
+Test fungsi cat dengan 2 file
+hj@hj:/media/hj/MASTER/praxis-academy$ sudo nano testfile3
+[sudo] password for hj: 
+Sorry, try again.
+[sudo] password for hj: 
+hj@hj:/media/hj/MASTER/praxis-academy$ cat > filedelete\
+> file delete
+cat: delete: No such file or directory
+hj@hj:/media/hj/MASTER/praxis-academy$ ls
+filedeletefile  kemampuan-dasar  link  README.md  testfile  testfile2  testfile3
+hj@hj:/media/hj/MASTER/praxis-academy$ rm filedeletefile 
+hj@hj:/media/hj/MASTER/praxis-academy$ ls
+kemampuan-dasar  link  README.md  testfile  testfile2  testfile3
+hj@hj:/media/hj/MASTER/praxis-academy$ mv testfile3 testfile4
+hj@hj:/media/hj/MASTER/praxis-academy$ ls
+kemampuan-dasar  link  README.md  testfile  testfile2  testfile4
+hj@hj:/media/hj/MASTER/praxis-academy$ cat testfile4
+ini adalah contoh penggunaan cat untuk membuat file
+Test fungsi cat dengan 2 file
+hj@hj:/media/hj/MASTER/praxis-academy$ mkdir testshell
+hj@hj:/media/hj/MASTER/praxis-academy$ rmdir testshell/
+hj@hj:/media/hj/MASTER/praxis-academy$ ls
+kemampuan-dasar  link  README.md  testfile  testfile2  testfile4
+hj@hj:/media/hj/MASTER/praxis-academy$ man ls
+hj@hj:/media/hj/MASTER/praxis-academy$ history
+ 1022  sudo ssh -i /media/hj/DATA/Absensi/tpppriv -p5100 root@103.94.120.115
+ 1023  ps -aux
+ 1024  exit
+ 1025  update-java-alternatives -l
+ 1026  sudo ssh -i /media/hj/DATA/Absensi/tpppriv -p5100 root@103.94.120.115
+ 1027  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+ 1028  sudo dpkg --configure -a
+ 1029  sudo apt-get install -f
+ 1030  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+ 1031  sudo apt --fix-broken install
+ 1032  sudo apt-get update
+ 1033  sudo dpkg --configure -a
+hj@hj:/media/hj/MASTER/praxis-academy$ clear
+hj@hj:/media/hj/MASTER/praxis-academy$ sudo apt-get update
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Get:2 http://dl.google.com/linux/chrome/deb stable Release [943 B]                                           
+Get:3 http://dl.google.com/linux/chrome/deb stable Release.gpg [819 B]                                                                    
+Hit:4 http://linux.teamviewer.com/deb stable InRelease                                                                                                                                                    
+Hit:5 http://download.virtualbox.org/virtualbox/debian zesty InRelease                                                                                                                                    
+Hit:6 http://ppa.launchpad.net/certbot/certbot/ubuntu artful InRelease                                                                                                                                    
+Ign:7 http://id.archive.ubuntu.com/ubuntu artful InRelease                                                                                                                                                
+Ign:8 http://security.ubuntu.com/ubuntu artful-security InRelease
+hj@hj:/media/hj/MASTER/praxis-academy$ history | grep 'chmod'
+ 1083  sudo chmod -r 755  /media/hj/DATA/DEVELOPMENT/tpp_dev/modul/*
+ 1084  sudo chmod -R 755  /media/hj/DATA/DEVELOPMENT/tpp_dev/modul/*
+hj@hj:/media/hj/MASTER/praxis-academy$ sudo chmod -R 755  /media/hj/DATA/DEVELOPMENT/tpp_dev/modul/jenis_keterangan/*
+hj@hj:/media/hj/MASTER/praxis-academy$ cd /var/www/online_simpeg/public_html/
+hj@hj:/var/www/online_simpeg/public_html$ sudo find . -type d -exec chmod 755 {} \;
+hj@hj:/var/www/online_simpeg/public_html$ sudo find . -type f -exec chmod 644 {} \;
+hj@hj:/media/hj/MASTER/praxis-academy$ sudo chown -R hj:www-data /var/www/data/
+hj@hj:/media/hj/MASTER/praxis-academy$ sudo chown -R hj:www-data /var/www/tpp/public_html/modul/
+hj@hj:/media/hj/MASTER/praxis-academy$ date
+Sel Agu 27 17:06:30 WIB 2019
+hj@hj:/media/hj/MASTER/praxis-academy$ env
+CLUTTER_IM_MODULE=xim
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LC_MEASUREMENT=id_ID.UTF-8
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_PAPER=id_ID.UTF-8
+LC_MONETARY=id_ID.UTF-8
+XDG_MENU_PREFIX=gnome-flashback-
+LANG=en_US.UTF-8
+MANAGERPID=1587
+DISPLAY=:0
+OLDPWD=/var/www/online_simpeg/public_html
+INVOCATION_ID=3973ebd369354f78be5630c620e28496
+COLORTERM=truecolor
+USERNAME=hj
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+MANDATORY_PATH=/usr/share/gconf/gnome-flashback-compiz.mandatory.path
+S_COLORS=auto
+LC_NAME=id_ID.UTF-8
+USER=hj
+DESKTOP_SESSION=gnome-flashback-compiz
+QT4_IM_MODULE=xim
+TEXTDOMAINDIR=/usr/share/locale/
+DEFAULTS_PATH=/usr/share/gconf/gnome-flashback-compiz.default.path
+PWD=/media/hj/MASTER/praxis-academy
+HOME=/home/hj
+JOURNAL_STREAM=9:30970
+TEXTDOMAIN=im-config
+QT_ACCESSIBILITY=1
+XDG_SESSION_TYPE=x11
+COMPIZ_BIN_PATH=/usr/bin/
+XDG_DATA_DIRS=/usr/share/gnome-flashback-compiz:/usr/share/gnome-flashback-compiz:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+XDG_SESSION_DESKTOP=gnome-flashback-compiz
+LC_ADDRESS=id_ID.UTF-8
+SSH_AGENT_LAUNCHER=gnome-keyring
+LC_NUMERIC=id_ID.UTF-8
+GTK_MODULES=gail:atk-bridge
+WINDOWPATH=2
+GNOME_SESSION_XDG_SESSION_PATH=
+TERM=xterm-256color
+SHELL=/bin/bash
+VTE_VERSION=4804
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+IM_CONFIG_PHASE=2
+XDG_CURRENT_DESKTOP=GNOME-Flashback:GNOME
+GPG_AGENT_INFO=/home/hj/.gnupg/S.gpg-agent:0:1:
+SHLVL=2
+WINDOWID=62914566
+LC_TELEPHONE=id_ID.UTF-8
+GDMSESSION=gnome-flashback-compiz
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=hj
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+XDG_RUNTIME_DIR=/run/user/1000
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+XDG_CONFIG_DIRS=/etc/xdg/xdg-gnome-flashback-compiz:/etc/xdg/xdg-gnome-flashback-compiz:/etc/xdg
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LC_IDENTIFICATION=id_ID.UTF-8
+SESSION_MANAGER=local/hj:@/tmp/.ICE-unix/1817,unix/hj:/tmp/.ICE-unix/1817
+LESSOPEN=| /usr/bin/lesspipe %s
+GTK_IM_MODULE=ibus
+LC_TIME=id_ID.UTF-8
+_=/usr/bin/env
+
+hj@hj:/media/hj/MASTER/praxis-academy$ locate absensi_manual
+/home/hj/.cache/netbeans/8.2/index/s15/errors/1/modul/aktifasi_absensi_manual
+/home/hj/.cache/netbeans/8.2/index/s7/errors/1/modul/aktifasi_absensi_manual
+/var/www/tpp/public_html/modul/aktifasi_absensi_manual
+/var/www/tpp/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual.php
+/var/www/tpp/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_action.php
+/var/www/tpp/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_add.php
+/var/www/tpp/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_approved.php
+/var/www/tpp/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_detail.php
+/var/www/tpp/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_edit.php
+/var/www/tpp/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_view.php
+/var/www/tpp/public_html/upload/aktifasi_absensi_manual
+/var/www/tpp/public_html/upload/aktifasi_absensi_manual/100_MANUAL_2018-02-01.pdf
+/var/www/tpp/public_html/upload/aktifasi_absensi_manual/100_MANUAL_2018-03-131520929583299639732.pdf
+/var/www/tpp/public_html/upload/aktifasi_absensi_manual/108_MANUAL_2018-03-131520929140264745195.pdf
+/var/www/tpp/public_html/upload/aktifasi_absensi_manual/108_MANUAL_2018-03-131520929301124630750.pdf
+/var/www/tpp/public_html/upload/aktifasi_absensi_manual/108_MANUAL_2018-03-131520929489552966169.pdf
+/var/www/tpp/public_html/upload/aktifasi_absensi_manual/index.html
+/var/www/tpp.local/public_html/modul/aktifasi_absensi_manual
+/var/www/tpp.local/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual.php
+/var/www/tpp.local/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_action.php
+/var/www/tpp.local/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_add.php
+/var/www/tpp.local/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_detail.php
+/var/www/tpp.local/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_edit.php
+/var/www/tpp.local/public_html/modul/aktifasi_absensi_manual/aktifasi_absensi_manual_view.php
+/var/www/tpp.local/public_html/modul/aktifasi_absensi_manual/index.html
+hj@hj:/media/hj/MASTER/praxis-academy$ ifconfig 
+enp2s0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 2c:56:dc:ec:bb:17  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 23371  bytes 2416041 (2.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 23371  bytes 2416041 (2.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp3s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.255.245  netmask 255.255.0.0  broadcast 10.10.255.255
+        inet6 fe80::ef8:1147:5f5a:ab26  prefixlen 64  scopeid 0x20<link>
+        ether 80:a5:89:a6:16:bf  txqueuelen 1000  (Ethernet)
+        RX packets 17590  bytes 1802548 (1.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 522  bytes 83626 (83.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+hj@hj:/media/hj/MASTER/praxis-academy$ ping tpp.bengkuluprov.go.id
+PING tpp.bengkuluprov.go.id (103.94.120.115) 56(84) bytes of data.
+64 bytes from 103.94.120.115 (103.94.120.115): icmp_seq=1 ttl=62 time=1.54 ms
+^C
+--- tpp.bengkuluprov.go.id ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.546/1.546/1.546/0.000 ms
+hj@hj:/media/hj/MASTER/praxis-academy$ traceroute 103.94.120.115
+The program 'traceroute' can be found in the following packages:
+ * inetutils-traceroute
+ * traceroute
+Try: sudo apt install <selected package>
+hj@hj:/media/hj/MASTER/praxis-academy$ sudo apt install traceroute
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  icoutils libevent-core-2.1-6 python-wxgtk3.0 python-wxversion
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  traceroute
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 45,4 kB of archives.
+After this operation, 152 kB of additional disk space will be used.
+Get:1 http://id.archive.ubuntu.com/ubuntu artful/universe amd64 traceroute amd64 1:2.1.0-2 [45,4 kB]
+Fetched 45,4 kB in 1s (37,6 kB/s)       
+Selecting previously unselected package traceroute.
+(Reading database ... 336953 files and directories currently installed.)
+Preparing to unpack .../traceroute_1%3a2.1.0-2_amd64.deb ...
+Unpacking traceroute (1:2.1.0-2) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Setting up traceroute (1:2.1.0-2) ...
+update-alternatives: using /usr/bin/traceroute.db to provide /usr/bin/traceroute (traceroute) in auto mode
+update-alternatives: using /usr/bin/lft.db to provide /usr/bin/lft (lft) in auto mode
+update-alternatives: using /usr/bin/traceproto.db to provide /usr/bin/traceproto (traceproto) in auto mode
+update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptraceroute (tcptraceroute) in auto mode
+hj@hj:/media/hj/MASTER/praxis-academy$ traceroute 103.94.120.115
+traceroute to 103.94.120.115 (103.94.120.115), 30 hops max, 60 byte packets
+ 1  gateway (10.10.0.1)  2.987 ms  3.280 ms  3.247 ms
+ 2  217.22.100.121.iconpln.net.id (121.100.22.217)  4.113 ms  4.105 ms  4.129 ms
+ 3  103.94.120.115 (103.94.120.115)  4.054 ms !X  4.032 ms !X  4.011 ms !X
+hj@hj:/media/hj/MASTER/praxis-academy$ 
+hj@hj:/media/hj/MASTER/praxis-academy$ uname 
+Linux
+hj@hj:/media/hj/MASTER/praxis-academy$ vi /etc/resolv.conf
+# This file is managed by man:systemd-resolved(8). Do not edit.
+#
+# 127.0.0.53 is the systemd-resolved stub resolver.
+# run "systemd-resolve --status" to see details about the actual nameservers.
+nameserver 127.0.0.53
+hj@hj:/media/hj/MASTER/praxis-academy$ whoami
+hj
+hj@hj:/media/hj/MASTER/praxis-academy$ vmstat 
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 1957572 140692 1047856    0    0    61     8   54  171  1  1 97  1  0
+hj@hj:/media/hj/MASTER/praxis-academy$ 
+
+hj@hj:/media/hj/MASTER/praxis-academy$ sudo ssh -i /media/hj/DATA/Absensi/tpppriv -p5100 root@103.94.120.115
+#   ____  ____  ____    _     ____  _  __ ____  _  __   ____  _  _  __
+#  /  _ \/  __\/  _ \  / \   /  _ \/ |/ //  _ \/ |/ /  /   _\/ \/ |/ /
+#  | / \||  \/|| / \|  | |   | / \||   / | / \||   /   |  /  | ||   / 
+#  | |-|||  __/| \_/|  | |_/\| \_/||   \ | |-|||   \   |  \__| ||   \ 
+#  \_/ \|\_/   \____/  \____/\____/\_|\_\\_/ \|\_|\_\  \____/\_/\_|\_\
+# ============================ispcpr===================================
+
+
+Enter passphrase for key '/media/hj/DATA/Absensi/tpppriv': 
+Last login: Tue Aug 27 09:08:19 2019 from 121.100.22.218
+[root@appserver ~]#
