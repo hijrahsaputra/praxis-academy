@@ -313,3 +313,243 @@ Fast-forward
 hj@hj:~/rhymes$ git branch -D hickory-dickory 
 Deleted branch hickory-dickory (was 2dfc0f3).
 ```
+## Bob
+```
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git config --global user.name "bobpraxis"
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git config --global user.email "mmmbengkulu06@gmail.com"
+HIJRAHs-MacBook-Air:~ hijrahsaputra$ git clone https://github.com/alicepraxis/rhymes.git
+Cloning into 'rhymes'...
+remote: Enumerating objects: 17, done.
+remote: Counting objects: 100% (17/17), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 17 (delta 6), reused 17 (delta 6), pack-reused 0
+Unpacking objects: 100% (17/17), done.
+HIJRAHs-MacBook-Air:~ hijrahsaputra$ cd rhymes/
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git checkout -b hickory-dickory
+Switched to a new branch 'hickory-dickory'
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ wget https://github.com/bryanhirsch/rhymes/blob/master/hickory-dickory-dock.txt
+--2019-08-28 10:28:58--  https://github.com/bryanhirsch/rhymes/blob/master/hickory-dickory-dock.txt
+Resolving github.com (github.com)... 13.250.177.223
+Connecting to github.com (github.com)|13.250.177.223|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: 'hickory-dickory-dock.txt'
+
+hickory-dickory-dock.txt         [  <=>                                        ]  66.15K   157KB/s    in 0.4s    
+
+2019-08-28 10:29:00 (157 KB/s) - 'hickory-dickory-dock.txt' saved [67735]
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git push origin hickory-dickory
+Username for 'https://github.com': alicepraxis
+Password for 'https://alicepraxis@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 14.70 KiB | 2.10 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'hickory-dickory' on GitHub by visiting:
+remote:      https://github.com/alicepraxis/rhymes/pull/new/hickory-dickory
+remote: 
+To https://github.com/alicepraxis/rhymes.git
+ * [new branch]      hickory-dickory -> hickory-dickory
+
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git remote rename origin bobpraxis
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git remote add alicepraxis https://github.com/alicepraxis/rhymes.git
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git remote
+alicepraxis
+bobpraxis
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git remote -v
+alicepraxis	https://github.com/alicepraxis/rhymes.git (fetch)
+alicepraxis	https://github.com/alicepraxis/rhymes.git (push)
+bobpraxis	https://github.com/alicepraxis/rhymes.git (fetch)
+bobpraxis	https://github.com/alicepraxis/rhymes.git (push)
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git remote update
+Fetching bobpraxis
+Fetching alicepraxis
+From https://github.com/alicepraxis/rhymes
+ * [new branch]      hickory-dickory -> alicepraxis/hickory-dickory
+ * [new branch]      master          -> alicepraxis/master
+
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git remote update
+Fetching bobpraxis
+Fetching alicepraxis
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'bobpraxis/master'.
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git merge alicepraxis/master
+Already up to date.
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git diff alicepraxis/master
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git push bobpraxis master
+Everything up-to-date
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git checkout -b bobpraxis-changes
+Switched to a new branch 'bobpraxis-changes'
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ wget https://github.com/hijrahsaputra/rhymes/blob/master/jack-be-nimble.txt
+--2019-08-28 11:30:49--  https://github.com/hijrahsaputra/rhymes/blob/master/jack-be-nimble.txt
+Resolving github.com (github.com)... 13.229.188.59
+Connecting to github.com (github.com)|13.229.188.59|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: 'jack-be-nimble.txt'
+
+jack-be-nimble.txt               [  <=>                                        ]  66.21K   184KB/s    in 0.4s    
+
+2019-08-28 11:30:50 (184 KB/s) - 'jack-be-nimble.txt' saved [67798]
+
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git add jack-be-nimble.txt
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -m 'Added jack-be-nimble.txt.'
+[bobpraxis-changes 0436008] Added jack-be-nimble.txt.
+ 1 file changed, 905 insertions(+)
+ create mode 100644 jack-be-nimble.txt
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ wget https://github.com/hijrahsaputra/rhymes/blob/master/mother-goose.txt
+--2019-08-28 11:31:37--  https://github.com/hijrahsaputra/rhymes/blob/master/mother-goose.txt
+Resolving github.com (github.com)... 13.229.188.59
+Connecting to github.com (github.com)|13.229.188.59|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: 'mother-goose.txt'
+
+mother-goose.txt                 [  <=>                                        ]  67.25K   171KB/s    in 0.4s    
+
+2019-08-28 11:31:38 (171 KB/s) - 'mother-goose.txt' saved [68860]
+
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git add mother-goose.txt
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -m 'Added mother-goose.txt.'
+[bobpraxis-changes d0b45e5] Added mother-goose.txt.
+ 1 file changed, 925 insertions(+)
+ create mode 100644 mother-goose.txt
+ 
+ HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ nano README.txt 
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -am 'Updated README.txt.'
+[bobpraxis-changes db68099] Updated README.txt.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git diff --word-diff
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -am 'Fixed typo in README.txt.'
+On branch bobpraxis-changes
+nothing to commit, working tree clean
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ nano README.txt 
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -am 'Fixed typo in README.txt.'
+[bobpraxis-changes 8af5619] Fixed typo in README.txt.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ nano README.txt 
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -am 'Updated README.txt.'
+[bobpraxis-changes ace7790] Updated README.txt.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ nano README.txt 
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -am 'Updated README.txt.'
+[bobpraxis-changes 1e0646b] Updated README.txt.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ wget https://github.com/hijrahsaputra/rhymes/blob/master/old-king-cole.txt
+--2019-08-28 11:47:57--  https://github.com/hijrahsaputra/rhymes/blob/master/old-king-cole.txt
+Resolving github.com (github.com)... 13.229.188.59
+Connecting to github.com (github.com)|13.229.188.59|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: 'old-king-cole.txt'
+
+old-king-cole.txt                [   <=>                                       ]  67.54K  72.7KB/s    in 0.9s    
+
+2019-08-28 11:47:59 (72.7 KB/s) - 'old-king-cole.txt' saved [69162]
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git add old-king-cole.txt
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -m 'Added old-king-cole.txt.'
+[bobpraxis-changes e4a70c4] Added old-king-cole.txt.
+ 1 file changed, 926 insertions(+)
+ create mode 100644 old-king-cole.txt
+ HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ wget https://github.com/hijrahsaputra/rhymes/blob/master/twinkle-twinkle.txt
+--2019-08-28 11:49:39--  https://github.com/hijrahsaputra/rhymes/blob/master/twinkle-twinkle.txt
+Resolving github.com (github.com)... 13.229.188.59
+Connecting to github.com (github.com)|13.229.188.59|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: 'twinkle-twinkle.txt.1'
+
+twinkle-twinkle.txt.1            [                      <=>                    ] 309.10K  34.8KB/s    in 7.8s    
+
+2019-08-28 11:49:48 (39.9 KB/s) - 'twinkle-twinkle.txt.1' saved [316523]
+
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git add twinkle-twinkle.txt.1
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -m 'Added twinkle-twinkle.txt.1.'
+[bobpraxis-changes fd24876] Added twinkle-twinkle.txt.1.
+ 1 file changed, 4688 insertions(+)
+ create mode 100644 twinkle-twinkle.txt.1
+ HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ nano README.txt 
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git commit -am 'Updated README.txt'
+[bobpraxis-changes 2c46c6f] Updated README.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git log
+commit 2c46c6fd23af02e8e342a90bd981d447bd7f99b1 (HEAD -> bobpraxis-changes)
+Author: bobpraxis <mmmbengkulu06@gmail.com>
+Date:   Wed Aug 28 11:51:26 2019 +0700
+
+    Updated README.txt
+
+commit fd248764b5708b2612a26455a00f38641da57af9
+Author: bobpraxis <mmmbengkulu06@gmail.com>
+Date:   Wed Aug 28 11:50:15 2019 +0700
+
+    Added twinkle-twinkle.txt.1.
+
+commit e4a70c4d1832e15ad85ffd8bb895b4f51cac7ced
+Author: bobpraxis <mmmbengkulu06@gmail.com>
+Date:   Wed Aug 28 11:48:30 2019 +0700
+
+    Added old-king-cole.txt.
+
+commit 1e0646bdf9eee24cd450df9143f1e81cd6724b0a
+Author: bobpraxis <mmmbengkulu06@gmail.com>
+Date:   Wed Aug 28 11:43:36 2019 +0700
+
+    Updated README.txt.
+
+commit ace779084f34b00986b04885b115a94ac5bb94ac
+Author: bobpraxis <mmmbengkulu06@gmail.com>
+Date:   Wed Aug 28 11:42:59 2019 +0700
+
+    Updated README.txt.
+
+commit 8af5619c06b1d859cc3a4e30ab2818787c691556
+Author: bobpraxis <mmmbengkulu06@gmail.com>
+Date:   Wed Aug 28 11:41:45 2019 +0700
+
+    Fixed typo in README.txt.
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git log --oneline
+2c46c6f (HEAD -> bobpraxis-changes) Updated README.txt
+fd24876 Added twinkle-twinkle.txt.1.
+e4a70c4 Added old-king-cole.txt.
+1e0646b Updated README.txt.
+ace7790 Updated README.txt.
+8af5619 Fixed typo in README.txt.
+db68099 Updated README.txt.
+d0b45e5 Added mother-goose.txt.
+0436008 Added jack-be-nimble.txt.
+0606457 (bobpraxis/master, bobpraxis/HEAD, alicepraxis/master, master) Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
+dbde4d1 Added jack-and-jill.txt.
+bbd5a1c Added all-around-the-mulberry-bush.txt.
+aefb37e Added project overview to README.txt
+e34657f First commit.
+
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git log --oneline
+2c46c6f (HEAD -> bobpraxis-changes) Updated README.txt
+fd24876 Added twinkle-twinkle.txt.1.
+e4a70c4 Added old-king-cole.txt.
+1e0646b Updated README.txt.
+ace7790 Updated README.txt.
+8af5619 Fixed typo in README.txt.
+db68099 Updated README.txt.
+d0b45e5 Added mother-goose.txt.
+0436008 Added jack-be-nimble.txt.
+0606457 (bobpraxis/master, bobpraxis/HEAD, alicepraxis/master, master) Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
+dbde4d1 Added jack-and-jill.txt.
+bbd5a1c Added all-around-the-mulberry-bush.txt.
+aefb37e Added project overview to README.txt
+e34657f First commit.
+HIJRAHs-MacBook-Air:rhymes hijrahsaputra$ git push origin master
+Counting objects: 27, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (27/27), 59.87 KiB | 2.72 MiB/s, done.
+Total 27 (delta 12), reused 0 (delta 0)
+remote: Resolving deltas: 100% (12/12), completed with 1 local object.
+To https://github.com/alicepraxis/rhymes.git
+   0606457..fb7a0ce  master -> master
+```
