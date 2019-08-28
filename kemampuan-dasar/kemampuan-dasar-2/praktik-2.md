@@ -11,7 +11,7 @@
 ## Tool 1: Adding Team Members
 There are generally two ways of setting up Github for team collaboration:
 1. Organizations - Menambahkan organisasi Pemerintah Provinsi Bengkulu
-![alt text](https://github.com/hijrahsaputra/images/blob/master/1.create_org.png)
+![alt text](https://github.com/hijrahsaputra/images/blob/master/org.png)
 
 Memberikan level akses masing-masing team :
 1. **Pull Only**: Fetch and Merge with another repository or a local copy. Read only access.
