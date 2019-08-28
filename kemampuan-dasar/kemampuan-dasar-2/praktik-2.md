@@ -59,7 +59,17 @@ $ git checkout master
 
 
 ## Tool 4: Analytics
+Dua tools yang diberikan didalam repository adalah Graphs dan Network 
+```https://github.com/[user-name]/[repo]/pulse```
+maka akan ditampilkan grafik sebagai berikut
+![alt text](https://github.com/hijrahsaputra/images/blob/master/pulse.png)
 
+![alt text](https://github.com/hijrahsaputra/images/blob/master/commit.png)
+
+![alt text](https://github.com/hijrahsaputra/images/blob/master/kontribut.png)
+
+untuk Network ditampilkan sebagai berikut
+![alt text](https://github.com/hijrahsaputra/images/blob/master/network.png)
 
 ## Tool 5: Project Management
 
