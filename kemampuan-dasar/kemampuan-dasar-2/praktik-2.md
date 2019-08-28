@@ -10,10 +10,19 @@
 
 ## Tool 1: Adding Team Members
 There are generally two ways of setting up Github for team collaboration:
-1. Organizations - Organization owner can create many teams with differing permission levels for various repositories
+1. Organizations - Menambahkan organisasi Pemerintah Provinsi Bengkulu
+![alt text](https://github.com/hijrahsaputra/images/blob/master/1.create_org.png)
 
-2. Collaborators - Repository owner can add collaborators with Read + Write access for a single repository
+Memberikan level akses masing-masing team :
+1. Pull Only: Fetch and Merge with another repository or a local copy. Read only access.
+2. Push and Pull: (1) along with updating of remote repo. Read + Write access.
+3. Push, Pull & Administrative: (1), (2) along with rights to billing info, creating teams as well as canceling Organization accounts. Read + Write + Admin access
 
+![alt text](https://github.com/hijrahsaputra/images/blob/master/akses.png)
+
+
+2. Menambahkan Collaborators - dengan akses Read + Write access untuk single repository
+![alt text](https://github.com/hijrahsaputra/images/blob/master/collabs.png)
 
 ## Tool 2: Pull Requests
 
