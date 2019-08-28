@@ -95,6 +95,10 @@ Come back to Github repository > Settings > Service Hooks > Pivotal Tracker
 ![alt text](https://github.com/hijrahsaputra/images/blob/master/pivotaltracker_webhook.png)
 
 ## Tool 6: Continuous Integration
+**Travis CI with Pull Requests**
+![alt text](https://github.com/hijrahsaputra/images/blob/master/travisci.png)
+
+![alt text](https://github.com/hijrahsaputra/images/blob/master/travisci2.png)
 
 ## Tool 7: Code Review
 Setiap commit Github memungkinkan adanya komentar setiap baris kode, dengan membandingkan menggunakan Compare branches / tags / SHA1 , Compare without whitespace, Diff, Patch dan Line Linking
