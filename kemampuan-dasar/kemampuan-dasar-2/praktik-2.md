@@ -28,6 +28,8 @@ Memberikan level akses masing-masing team :
 Dua model pull request di Github: 
 
 1. **Fork & Pull Model** - Used in a public repository for which we don't have push access
+2. **Share Repository Model** - Used in a private repository for which we have push access. Fork is not required is this case.
+
 ![alt text](https://github.com/hijrahsaputra/images/blob/master/fork.png)
 
 konfirmasi penambahan pull request dengan fork & full model
@@ -36,8 +38,22 @@ konfirmasi penambahan pull request dengan fork & full model
 hasil setelah ditambahkan pull request dengan fork & full model
 ![alt text](https://github.com/hijrahsaputra/images/blob/master/fork3.png)
 
-2. **Share Repository Model** - Used in a private repository for which we have push access. Fork is not required is this case.
+Menggunakan akses SSH key passphrase dengan memasukkan username dan password setiap melakukan ``git push`` atau ``git pull`` dengan langkah sebagai berikut : 
+```
+$ git clone [ssh-url] [folder-name]
+$ cd [folder-name]
+```
 
+Menambahkan branch baru dengan melakukan modifikasi terhadap file ```readme.md``` :
+```
+$ git checkout -b [new-feature]
+```
+Setelah membuat perubahan, dilakukan commit terhadap perubahan dengan melakukan checkout ke the git master branch
+```
+$ git add .
+$ git commit -m "information added in readme"
+$ git checkout master
+```
 
 ## Tool 3: Bug Tracking
 
