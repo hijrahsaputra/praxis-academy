@@ -313,6 +313,4 @@ Fast-forward
  create mode 100644 hickory-dickory-dock.txt
 hj@hj:~/rhymes$ git branch -D hickory-dickory 
 Deleted branch hickory-dickory (was 2dfc0f3).
-
-
-
+```
