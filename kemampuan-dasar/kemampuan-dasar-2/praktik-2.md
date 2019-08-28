@@ -97,6 +97,10 @@ Come back to Github repository > Settings > Service Hooks > Pivotal Tracker
 ## Tool 6: Continuous Integration
 
 ## Tool 7: Code Review
-
+Setiap commit Github memungkinkan adanya komentar setiap baris kode, dengan membandingkan menggunakan Compare branches / tags / SHA1 , Compare without whitespace, Diff, Patch dan Line Linking
+![alt text](https://github.com/hijrahsaputra/images/blob/master/codereview.png)
 
 ## Tool 8: Documenting
+Dokumentasi digunakan dengan menggunakan Github Wiki untuk membuat dokumentasi dari source code, dapat ditambahkan Github Hubot dan Mentions, Shortcuts & Emoji
+![alt text](https://github.com/hijrahsaputra/images/blob/master/wiki.png)
+
