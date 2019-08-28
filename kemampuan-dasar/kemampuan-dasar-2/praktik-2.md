@@ -56,7 +56,10 @@ $ git checkout master
 ```
 
 ## Tool 3: Bug Tracking
+Untuk melakukan bug trackind dilakukan di menu Issues
+![alt text](https://github.com/hijrahsaputra/images/blob/master/brokenurl.png)
 
+![alt text](https://github.com/hijrahsaputra/images/blob/master/brokenbug.png)
 
 ## Tool 4: Analytics
 Dua tools yang diberikan didalam repository adalah Graphs dan Network 
