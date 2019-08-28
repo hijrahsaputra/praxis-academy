@@ -14,9 +14,9 @@ There are generally two ways of setting up Github for team collaboration:
 ![alt text](https://github.com/hijrahsaputra/images/blob/master/1.create_org.png)
 
 Memberikan level akses masing-masing team :
-1. Pull Only: Fetch and Merge with another repository or a local copy. Read only access.
-2. Push and Pull: (1) along with updating of remote repo. Read + Write access.
-3. Push, Pull & Administrative: (1), (2) along with rights to billing info, creating teams as well as canceling Organization accounts. Read + Write + Admin access
+1. **Pull Only**: Fetch and Merge with another repository or a local copy. Read only access.
+2. **Push and Pull**: (1) along with updating of remote repo. Read + Write access.
+3. **Push, Pull & Administrative**: (1), (2) along with rights to billing info, creating teams as well as canceling Organization accounts. Read + Write + Admin access
 
 ![alt text](https://github.com/hijrahsaputra/images/blob/master/akses.png)
 
@@ -25,6 +25,18 @@ Memberikan level akses masing-masing team :
 ![alt text](https://github.com/hijrahsaputra/images/blob/master/collabs.png)
 
 ## Tool 2: Pull Requests
+Dua model pull request di Github: 
+
+1. **Fork & Pull Model** - Used in a public repository for which we don't have push access
+![alt text](https://github.com/hijrahsaputra/images/blob/master/fork.png)
+
+konfirmasi penambahan pull request dengan fork & full model
+![alt text](https://github.com/hijrahsaputra/images/blob/master/fork2.png)
+
+hasil setelah ditambahkan pull request dengan fork & full model
+![alt text](https://github.com/hijrahsaputra/images/blob/master/fork3.png)
+
+2. **Share Repository Model** - Used in a private repository for which we have push access. Fork is not required is this case.
 
 
 ## Tool 3: Bug Tracking
