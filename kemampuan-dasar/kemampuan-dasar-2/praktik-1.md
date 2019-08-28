@@ -1,3 +1,4 @@
+## Alice 
 hj@hj:~$ mkdir rhymes
 hj@hj:~$ cd rhymes
 hj@hj:~/rhymes$ git config --global user.name "alicepraxis"
