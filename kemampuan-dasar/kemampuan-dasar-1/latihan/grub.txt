@@ -1,0 +1,76 @@
+grep menuentry /boot/grub/grub.cfg
+if [ x"${feature_menuentry_id}" = xy ]; then
+  menuentry_id_option="--id"
+  menuentry_id_option=""
+export menuentry_id_option
+menuentry 'Ubuntu' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+submenu 'Advanced options for Ubuntu' $menuentry_id_option 'gnulinux-advanced-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-46-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-46-generic-advanced-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-46-generic (recovery mode)' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-46-generic-recovery-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-45-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-45-generic-advanced-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-45-generic (recovery mode)' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-45-generic-recovery-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-36-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-36-generic-advanced-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-36-generic (recovery mode)' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-36-generic-recovery-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-31-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-31-generic-advanced-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-31-generic (recovery mode)' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-31-generic-recovery-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-17-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-17-generic-advanced-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+	menuentry 'Ubuntu, with Linux 4.13.0-17-generic (recovery mode)' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.13.0-17-generic-recovery-fa140ca4-dd53-4895-abd5-8b58ed1b43c1' {
+menuentry 'Memory test (memtest86+)' {
+menuentry 'Memory test (memtest86+, serial console 115200)' {
+
+# If you change this file, run 'update-grub' afterwards to update
+# /boot/grub/grub.cfg.
+# For full documentation of the options in this file, see:
+#   info -f grub -n 'Simple configuration'
+
+GRUB_DEFAULT=0
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+
+# Uncomment to enable BadRAM filtering, modify to suit your needs
+# This works with Linux (no patch required) and with any kernel that obtains
+# the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+#GRUB_BADRAM="0x01234567,0xfefefefe,0x89abcdef,0xefefefef"
+
+# Uncomment to disable graphical terminal (grub-pc only)
+#GRUB_TERMINAL=console
+
+# The resolution used on graphical terminal
+# note that you can use only modes which your graphic card supports via VBE
+# you can see them in real GRUB with the command `vbeinfo'
+#GRUB_GFXMODE=640x480
+
+# Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
+#GRUB_DISABLE_LINUX_UUID=true
+
+# Uncomment to disable generation of recovery mode menu entries
+#GRUB_DISABLE_RECOVERY="true"
+
+# Uncomment to get a beep at grub start
+#GRUB_INIT_TUNE="480 440 1
+
+Keterangan : 
+urutan booting pada linux : 
+1. BIOS: Basic Input/Output System merupakan interface level paling bawah yang menghubungkan antara komputer dan periperalnya. BIOS melakukan pengecekan integritas memori dan mencari instruksi pada? Master Boot Record (MBR) yang terdapat pada floppy drive atau harddisk.
+2. MBR menjalankan boot loader. Di linux, boot loader yang sering dipakai adalah LILO (Linux Loader) dan GRUB (GRand Unified Boot loader). Pada Red Hat dan Turunannya menggunakan GRUB sebagai boot loader.
+3. GRUB akan membaca label sistem operasi yang kernelnya akan dijalankan. Pada boot loader inilah sistem operasi mulai dipanggil. Untuk mengkonfigurasi file grub, buka filenya di /boot/grub/grub.conf
+4. Setelah itu, tanggung jawab untuk booting diserahkan ke kernel. Setelah itu, kernel akan menampilkan versi dari kernel yang dipergunakan, mengecek status SELinux, menegecek paritisi swap, mengecek memory, dan sebagainya
+5. Kernel yang dipanggil oleh bootloader kemudian menjalankan program init, yaitu proses yang menjadi dasar dari proses-proses yang lain. Ini dikenal dengan nama The First Process. Proses ini mengacu pada script yang ada di file /etc/rc.d/rc.sysinit.
+6. Program init kemudian menentukan jenis runlevel yang terletak pada file /etc/inittab. Berdasarkan pada run-level, script kemudian menjalankan berbagai proses lain yang dibutuhkan oleh sistem sehingga sistem dapat berfungsi dan digunakan. Runlevel adalah suatu parameter yang mengatur servis yang akan dijalankan misalnya single user, reboot, shutdown, dan sebagainya. Program yang mengatur runlevel ini adalah init yang terletak pada direktori /etc/inittab.
+
+Bagaimana Cara Kerja GRUB:
+1. Memanggil Primary Boot-Loader
+Primary boot-loader berisi program dengan ukuran lebih kecil dari 512 bytes karena diletakan pada MBR yang hanya berukuran sebesar 512 bytes, program ini kemudian memanggil secondary boot-loader.
+2. Memanggil Secondary Boot-Loader
+Seondary boot-loader kemudian membawa kita ke menu pilihan sistem operasi apa yang akan kita jalankan, GRUB menyediakan dua menu pilihan utama, yaitu pilihan menu sistem operasi dan mode boot-loader command.
+3. Memanggil Sistem Operasi Pada Posisi Partisi Tertentu
+Dalam memanggil sistem operasi, GRUB mendapat intruksi tertentu untuk memanggil sistem operasi tersebut. Intruksi ini bisa kita definisikan melalui konfigurasi GRUB, atau kita ketikan secara manual pada mode boot-loader command.
+
+GRUB memiliki “true command-bassed”, yang memiliki fleksibilitas sangat tinggi dalam proses sebelum kita masuk ke dalam sistem operasi tertentu. 
+GRUB Mendukung Mode Logical Block Addressing (LBA)
+LBA meletakan kode konversi pada firmware yang bertujuan untuk proses pencarian data tertentu pada disk, yang digunakan oleh hampir semua tipe SCSI.
+GRUB dapat membaca partisi ext2 fungsi ini memungkinkan GRUB untuk mengakses file konfigurasi, /boot/grub/grub.conf,setiap kali proses booting dilakukan.
