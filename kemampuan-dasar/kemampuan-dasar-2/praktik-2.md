@@ -72,7 +72,24 @@ untuk Network ditampilkan sebagai berikut
 ![alt text](https://github.com/hijrahsaputra/images/blob/master/network.png)
 
 ## Tool 5: Project Management
+**Github and Trello**
+Open an account in Trello
+![alt text](https://github.com/hijrahsaputra/images/blob/master/trello.png)
 
+![alt text](https://github.com/hijrahsaputra/images/blob/master/trello-github.png)
+
+Go to the Github repository > Settings > Service Hooks > Trello
+![alt text](https://github.com/hijrahsaputra/images/blob/master/trellowebhook.png)
+
+**Github and Pivotal Tracker**
+Create a new project in the Pivotal Tracker with a new Story that needs to be delivered.
+![alt text](https://github.com/hijrahsaputra/images/blob/master/pivotaltracker.png)
+
+Go to Profile > API Token (right at the bottom). Copy the API token given.
+![alt text](https://github.com/hijrahsaputra/images/blob/master/tokenpivot.png)
+
+Come back to Github repository > Settings > Service Hooks > Pivotal Tracker
+![alt text](https://github.com/hijrahsaputra/images/blob/master/pivotaltracker_webhook.png)
 
 ## Tool 6: Continuous Integration
 
