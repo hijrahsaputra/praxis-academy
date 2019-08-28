@@ -9,7 +9,6 @@ Initialized empty Git repository in /home/hj/rhymes/.git/
 hj@hj:~/rhymes$ touch README.txt
 hj@hj:~/rhymes$ git add README.txt
 hj@hj:~/rhymes$ git commit -m 'First commit.'
-```
 [master (root-commit) e34657f] First commit.
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 README.txt
