@@ -22,7 +22,7 @@ r1.question("Silakan memilih bulan (1..12) : ? ", (answer) => {
     }
     catch (e) {
         monthName = 'unknown';
-        logMyErrors(e); // pass exception object to error handler -> your own function
+        //logMyErrors(e); // pass exception object to error handler -> your own function
     }
 
     switch (answer) {
@@ -30,19 +30,37 @@ r1.question("Silakan memilih bulan (1..12) : ? ", (answer) => {
             console.log('Bulan : ', getMonthName(answer));
             break;
         case '2':
-            console.log('Apples are $0.32 a pound.');
+            console.log('Bulan : ', getMonthName(answer));
             break;
         case '3':
-            console.log('Bananas are $0.48 a pound.');
+            console.log('Bulan : ', getMonthName(answer));
             break;
         case '4':
-            console.log('Cherries are $3.00 a pound.');
+            console.log('Bulan : ', getMonthName(answer));
             break;
         case '5':
-            console.log('Mangoes are $0.56 a pound.');
+            console.log('Bulan : ', getMonthName(answer));
             break;
         case '6':
-            console.log('Mangoes and papayas are $2.79 a pound.');
+            console.log('Bulan : ', getMonthName(answer));
+            break;
+        case '7':
+            console.log('Bulan : ', getMonthName(answer));
+            break;
+        case '8':
+            console.log('Bulan : ', getMonthName(answer));
+            break;
+        case '9':
+            console.log('Bulan : ', getMonthName(answer));
+            break;
+        case '10':
+            console.log('Bulan : ', getMonthName(answer));
+            break;
+        case '11':
+            console.log('Bulan : ', getMonthName(answer));
+            break;
+        case '12':
+            console.log('Bulan : ', getMonthName(answer));
             break;
         default:
             console.log('Sorry, we are out of ' + answer + '.');
