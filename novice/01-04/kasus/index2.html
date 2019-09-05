@@ -6,19 +6,16 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <script type="text/javascript">
         var re = /[\w-]+@([\w-]+\.)+[\w-]+$/i;
-        var ru = /([^@]*)/;
-
+        var rgname = /([^@]*)/;
+        var rgtld = /[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/;
         function CheckEmail(EmailInput) {
             var OK = re.exec(EmailInput.value);
-            //var nameList = ru.exec(EmailInput.value);
-            var check = EmailInput.value;
-            var nameList = check.split(ru);
-            //var uname = rgname.exec(EmailInput.value);
+            var uname = rgname.exec(EmailInput.value);
+            var nametld = rgtld.exec(EmailInput.value);
             if (!OK)
                 window.alert(EmailInput.value + ' Format email salah!');
             else {
-
-                window.alert('Halo, usernama anda ' + nameList[0] + ' adalah domain anda adalah ' + OK[0]);
+                window.alert('Halo, usernama anda ' + uname[0] + ' adalah domain anda adalah ' + nametld[0]);
             }
 
         }  
