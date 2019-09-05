@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>  
+  <head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">  
+    <meta http-equiv="Content-Script-Type" content="text/javascript">  
+    <script type="text/javascript">  
+      //var re = /^([A-Za-z]{1,2})(\s|-)*([0-9]{1,4})(\s|-)*([A-Za-z]{0,3})$/i;  
+      var re =  /^[a-zA-z]{1,2}\s?\d{1,4}\s?[a-zA-Z]{1,3}$/i;
+      function CheckPlatNomor(platInput) {  
+        var OK = re.exec(platInput.value);  
+        if (!OK)  
+          window.alert(platInput.value + ' bukan plat nomor Indonesia!');  
+        else
+          window.alert('Plat nomor Indonesia, plat nomor anda adalah ' + OK[0]);  
+      }  
+    </script>  
+  </head>  
+  <body>  
+    <p>Masukkan plat nomor kendaraan anda setelah itu tekan tombol "Check".
+        <br>Format :  ## 9999 ###.</p>
+    <form action="#">  
+      <input id="platnomor"><button onclick="CheckPlatNomor(document.getElementById('platnomor'));">Check</button>
+    </form>  
+  </body>  
+</html>

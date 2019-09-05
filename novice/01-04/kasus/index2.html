@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <script type="text/javascript">
+        var re = /[\w-]+@([\w-]+\.)+[\w-]+$/i;
+        var ru = /([^@]*)/;
+
+        function CheckEmail(EmailInput) {
+            var OK = re.exec(EmailInput.value);
+            //var nameList = ru.exec(EmailInput.value);
+            var check = EmailInput.value;
+            var nameList = check.split(ru);
+            //var uname = rgname.exec(EmailInput.value);
+            if (!OK)
+                window.alert(EmailInput.value + ' Format email salah!');
+            else {
+
+                window.alert('Halo, usernama anda ' + nameList[0] + ' adalah domain anda adalah ' + OK[0]);
+            }
+
+        }  
+    </script>
+</head>
+
+<body>
+    <p>Masukkan alamat email anda setelah itu tekan tombol "Check".
+        <br>Format : username@domail.tld</p>
+    <form action="#">
+        <input id="emailname"><button onclick="CheckEmail(document.getElementById('emailname'));">Check</button>
+    </form>
+</body>
+
+</html>
