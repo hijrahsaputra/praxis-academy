@@ -1,0 +1,19 @@
+{
+  "name": "kasus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kasus_endpoint.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "got": "^9.6.0",
+    "request": "^2.88.0",
+    "superagent": "^5.1.0"
+  }
+}
