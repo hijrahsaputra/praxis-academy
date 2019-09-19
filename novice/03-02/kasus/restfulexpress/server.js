@@ -1,6 +1,6 @@
 let express = require('express'),
     app = express(),
-    port = process.env.PORT || 3000,
+    port = process.env.PORT || 3100,
     bodyParser = require('body-parser'),
     controller = require('./controller');
 
@@ -12,4 +12,4 @@ routes(app);
 
 
 app.listen(port);
-console.log("Halo cuuyy, ini ada diserver : " + port);
+console.log("Server is up on port : " + port);
