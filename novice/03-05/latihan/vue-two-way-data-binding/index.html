@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Two Way Data Binding</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <h1>Keyboard Events</h1>
+        <label for="name">Name : </label>
+        <input type="text" v-model="name" />
+        <span>{{name}}</span>
+        <br>
+        <label for="age">Age : </label>
+        <input type="text" v-model="age" />
+        <span>{{age}}</span>
+        <br>
+        <span>Multiline message is:</span>
+        <p style="white-space: pre-line">{{message}}</p>
+        <br>
+        <textarea v-model="message" placeholder="Add multiple lines"></textarea>
+        <br>
+        <input type="checkbox" name="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{checked}}</label>
+        <br>
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span>
+        <br>
+        <select v-model="selected">
+            <option disabled value="">Please select one</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+
+        <span>Selected  : {{selected}}</span>
+        <br>
+        <select v-model="multiple" multiple>
+                <option disabled value="">Please select one</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+
+        <span>Selected  : {{multiple}}</span>
+        <br>
+        <select v-model="vfor">
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{option.text}}
+                </option>
+            </select>
+
+        <span>Selected  : {{vfor}}</span>
+        <br>
+        <input type="checkbox" v-model="toggle" true-value="yes" false-value="no">
+        <span>Selected  : {{toggle}}</span>
+        <br>
+        <input type="radio" v-model="pick" v-bind:value="a">
+        <span>Selected  : {{pick}}</span>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
